@@ -9,3 +9,5 @@ cycleGAN是一种不成对的图像到图像转换的神经网络算法，由Ber
 [comment]: <> (a reference style link.)
 
 [公式] :<> (L_{GAN}(F,D_{Y},X,Y)=E_{y\sim Pdata(y)}[f(D_{Y}(y))]+E_{x\sim Pdata(x)}[f(1-D_{Y}(x))])
+
+![](CodeCogsEqn.gif "formula of loss cycleGAN")
