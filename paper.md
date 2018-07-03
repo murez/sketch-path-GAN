@@ -1,4 +1,8 @@
-# <font color=red><center>基于生成式对抗神经网络的素描路径生成系统</center></font>
+# <font><center>基于生成式对抗神经网络的素描路径生成系统</center></font>
+## <font><center>张厶元  龚敬洋</center></font>
+
+###   关键字 人工神经网络;深度学习;生成式对抗网络;绘画风格转移
+
 
 ##  1.选题背景
 
@@ -8,4 +12,4 @@
 
 ##  2.相关工作
 
-  基于神经网络算法的发展和CUDA(Compute Unified Device Architecture)显卡计算技术的发展，原先由人工生成
+  基于神经网络算法的发展和CUDA(Compute Unified Device Architecture)显卡计算技术的发展，原先许多必须由人工生成
