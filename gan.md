@@ -10,7 +10,7 @@ cycleGAN是一种不成对的图像到图像转换的神经网络算法，由Ber
 
 [公式] :<> (L_{GAN}(F,D_{Y},X,Y)=E_{y\sim Pdata(y)}[T(D_{Y}(y))]+E_{x\sim Pdata(x)}[T(1-D_{Y}(x))])
 
-![](CodeCogsEqn.gif "formula of loss cycleGAN")
+![](CodeCogsEqn.svg "formula of loss cycleGAN")
 
 但单纯的使用这一个损失是无法进行训练的。原因在于，映射F完全可以将所有x都映射为Y空间中的同一张图片，使损失无效化。对此，作者又提出了所谓的“循环一致性损失”（cycle consistency loss）。
 
