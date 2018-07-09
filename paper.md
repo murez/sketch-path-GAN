@@ -78,6 +78,7 @@ cv2.imwrite(TargetFileName, SourceImage, [int(cv2.IMWRITE_JPEG_QUALITY), Quality
 
 将照片进行预处理后，我们通过POST方式调用旷世FACE++的面部识别接口，并获得包含人脸特征信息的JSON数据。获得的人脸特征信息包含面部的矩形位置(face_rectangle)，面部器官的轮廓位置(landmarks)以及人脸的特征信息(attributes)。通过对JSON数据进行解析和分离，便可得到精确的人脸特征点位置信息。测试结果如下：
 
+<<<<<<< HEAD
 <img src="https://s1.ax1x.com/2018/07/04/PEftPJ.md.jpg" width="300" hegiht="313" align=center />
 
 图3-1 原图片
