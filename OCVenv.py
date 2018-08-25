@@ -1,5 +1,9 @@
 from PIL import Image
+from scipy import misc
+from skimage import color
+from skimage import measure
 import sys,os
+import matplotlib.pyplot as plt
 
 def sketch(img, threshold):
     if threshold < 0: threshold = 0
@@ -33,4 +37,11 @@ elif len(sys.argv) == 3:
     threshold = int(sys.argv[2])
 img = Image.open(path)
 img = sketch(img, threshold)
-img.save('layout.jpg', 'JPEG')
+img.rotate(180).save('layout.jpg', 'JPEG')
+
+simg = misc.imread("layout.jpg")
+gsimg = color.colorconv.rgb2gray(simg)
+contours = measure.find_contours(gsimg,0.8)
+for n,contour in enumerate(contours):
+    plt.plot(contour[:, 1], contour[:, 0], linewidth=2)
+plt.show()
