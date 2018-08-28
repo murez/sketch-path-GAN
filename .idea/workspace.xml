@@ -4,26 +4,25 @@
     <list default="true" id="da7d9c12-fe76-4e1f-b168-a5ad1de2dfb7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sketch-path-GAN.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceDectect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stroke_draw/stroke_draw_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/stroke_draw/stroke_draw_init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cyclegan/faceDectect.py" beforeDir="false" afterPath="$PROJECT_DIR$/cyclegan/faceDectect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cyclegan/response" beforeDir="false" afterPath="$PROJECT_DIR$/cyclegan/response" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/referance/Sketch-Simplification-master/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/referance/Sketch-Simplification-master/test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/referance/Sketch-Simplification-master/train.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/referance/Sketch-Simplification-master/train.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/sketch_path_GAN$inference_demo.coverage" NAME="inference_demo Coverage Results" MODIFIED="1535361380055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cyclegan_from_tenserflow_official" />
-    <SUITE FILE_PATH="coverage/workplace$faceDectect__1_.coverage" NAME="faceDectect (1) Coverage Results" MODIFIED="1535455940195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cyclegan" />
     <SUITE FILE_PATH="coverage/sketch_path_GAN$opencv_test.coverage" NAME="opencv_test Coverage Results" MODIFIED="1535358234590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/workplace$stroke_draw_init.coverage" NAME="stroke_draw_init Coverage Results" MODIFIED="1535457225490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stroke_draw" />
-    <SUITE FILE_PATH="coverage/sketch_path_GAN$faceDectect.coverage" NAME="faceDectect Coverage Results" MODIFIED="1535451196732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sketch_path_GAN$inference_demo.coverage" NAME="inference_demo Coverage Results" MODIFIED="1535361380055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cyclegan_from_tenserflow_official" />
+    <SUITE FILE_PATH="coverage/sketch_path_GAN$faceDectect.coverage" NAME="faceDectect Coverage Results" MODIFIED="1535465509415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/sketch_path_GAN$stroke_draw_init.coverage" NAME="stroke_draw_init Coverage Results" MODIFIED="1535431220149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stroke_draw" />
     <SUITE FILE_PATH="coverage/sketch_path_GAN$train_test.coverage" NAME="train_test Coverage Results" MODIFIED="1535430787642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cyclegan_from_tenserflow_official" />
+    <SUITE FILE_PATH="coverage/sketch_path_GAN$faceDectect__1_.coverage" NAME="faceDectect (1) Coverage Results" MODIFIED="1535465580396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cyclegan" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -79,46 +78,72 @@
     <session id="1134897170">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.4" value="7" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.4" value="9" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
+          <entry key="ipynb" value="5" />
           <entry key="jpg" value="21" />
           <entry key="png" value="1" />
-          <entry key="py" value="23" />
-          <entry key="response" value="2" />
+          <entry key="pxd" value="1" />
+          <entry key="py" value="30" />
+          <entry key="response" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Cython" value="1" />
+          <entry key="IPNB" value="5" />
           <entry key="Image" value="22" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="23" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1202" />
-          <entry key="txt" value="57" />
+          <entry key="py" value="1396" />
+          <entry key="txt" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="57" />
-          <entry key="Python" value="1202" />
+          <entry key="PLAIN_TEXT" value="79" />
+          <entry key="Python" value="1396" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cyclegan/faceDectect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cyclegan/response">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="93" selection-start-column="93" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -143,9 +168,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/OCVenv.py" />
         <option value="$PROJECT_DIR$/faceDectect.py" />
+        <option value="$PROJECT_DIR$/referance/Sketch-Simplification-master/train.ipynb" />
         <option value="$PROJECT_DIR$/cyclegan/faceDectect.py" />
-        <option value="$PROJECT_DIR$/cyclegan/pretreat.py" />
-        <option value="$PROJECT_DIR$/stroke_draw/stroke_draw_init.py" />
       </list>
     </option>
   </component>
@@ -155,14 +179,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="404" />
-    <option name="y" value="339" />
-    <option name="width" value="1003" />
-    <option name="height" value="860" />
+    <option name="x" value="723" />
+    <option name="y" value="146" />
+    <option name="width" value="1221" />
+    <option name="height" value="819" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,33 +191,44 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
+              <item name="sketch-path-GAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sketch-path-GAN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
+              <item name="sketch-path-GAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sketch-path-GAN" type="462c0819:PsiDirectoryNode" />
               <item name="cyclegan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sketch-path-GAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sketch-path-GAN" type="462c0819:PsiDirectoryNode" />
+              <item name="referance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sketch-path-GAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sketch-path-GAN" type="462c0819:PsiDirectoryNode" />
+              <item name="referance" type="462c0819:PsiDirectoryNode" />
+              <item name="Sketch-Simplification-master" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="vector&#9;null&#9;null&#10;vec&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/OCVenv.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workplace\cyclegan" />
       <recent name="G:\Python Projects\sketch-path-GAN" />
     </key>
   </component>
@@ -212,9 +244,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.stroke_draw_init">
+  <component name="RunManager" selected="Python.faceDectect (1)">
     <configuration name="faceDectect (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="workplace" />
+      <module name="sketch-path-GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -231,6 +263,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="faceDectect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sketch-path-GAN" />
@@ -250,6 +285,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="inference_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sketch-path-GAN" />
@@ -269,9 +307,12 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="stroke_draw_init" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="workplace" />
+      <module name="sketch-path-GAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -288,6 +329,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="train_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sketch-path-GAN" />
@@ -307,6 +351,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.stroke_draw_init" />
@@ -317,9 +364,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.stroke_draw_init" />
         <item itemvalue="Python.faceDectect (1)" />
         <item itemvalue="Python.faceDectect" />
+        <item itemvalue="Python.stroke_draw_init" />
         <item itemvalue="Python.train_test" />
         <item itemvalue="Python.inference_demo" />
       </list>
@@ -364,7 +411,21 @@
       <option name="project" value="LOCAL" />
       <updated>1535450768856</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="face detection ##2">
+      <created>1535451213056</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535451213056</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Pretreat stuff ##">
+      <created>1535451326819</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1535451326819</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -382,30 +443,54 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.44379562" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.38379532" side_tool="true" weight="0.3275488" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68960357" weight="0.2996058" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.6162047" weight="0.5672451" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49962604" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="SciView" order="4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28731343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49962604" weight="0.39804772" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.68960357" visible="true" weight="0.10412148" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49962604" weight="0.39804772" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.44379562" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.6162047" weight="0.56663054" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.38379532" side_tool="true" weight="0.3275488" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49962604" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28731343" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68960357" weight="0.10412148" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49962604" weight="0.39804772" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.44379562" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.6162047" weight="0.56663054" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.38379532" side_tool="true" weight="0.3275488" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49962604" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -447,24 +532,11 @@
     <MESSAGE value="PIL test" />
     <MESSAGE value="vectorize stuff ##" />
     <MESSAGE value="face detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="face detection" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="3" />
-    </breakpoint-manager>
+    <MESSAGE value="face detection ##2" />
+    <MESSAGE value="Pretreat stuff ##" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pretreat stuff ##" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stroke_draw/stroke_draw_init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cyclegan_from_tenserflow_official/data_provider_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -560,68 +632,80 @@
     <entry file="file://$PROJECT_DIR$/f1-001-01.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/OCVenv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/faceDectect.py" />
     <entry file="file://$PROJECT_DIR$/response">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="3668" lean-forward="true" selection-start-column="3668" selection-end-column="3668" />
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCVenv.py" />
+    <entry file="file://$PROJECT_DIR$/faceDectect.py" />
+    <entry file="file://$PROJECT_DIR$/stroke_draw/response">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" lean-forward="true" selection-start-column="48" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stroke_draw/pretreat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stroke_draw/stroke_draw_init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/pkgs/python-3.6.5-h0c2934d_0/Tools/demo/vector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/pkgs/cython-0.28.2-py36hfa6e2cd_0/Lib/site-packages/Cython/Includes/libcpp/vector.pxd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/referance/Sketch-Simplification-master/test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/referance/Sketch-Simplification-master/train.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cyclegan/response">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="987" selection-start-column="987" selection-end-column="987" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-313451744/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1618">
-          <caret line="5580" column="4" selection-start-line="5580" selection-start-column="4" selection-end-line="5580" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="2314" column="8" selection-start-line="2314" selection-start-column="8" selection-end-line="2314" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stroke_draw/stroke_draw_init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <caret column="93" selection-start-column="93" selection-end-column="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cyclegan/faceDectect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="589">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cyclegan/pretreat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

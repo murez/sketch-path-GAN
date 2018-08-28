@@ -21,21 +21,22 @@ def detect_face(http_url, key, secret, filepath1):
     faces = req_dict['faces']
     for i in range(len(faces)):
         face_rectangle = faces[i]['face_rectangle']
+        landmark = faces[i]['landmark']
         width = face_rectangle['width']
         top = face_rectangle['top']
         left = face_rectangle['left']
         height = face_rectangle['height']
-        start = (left, top)
-        end = (left + width, top + height)
+        mouth_leftup_x = landmark['mouth_left_corner']['x']
+        mouth_leftup_y = landmark['mouth_upper_lip_top']['y']
+        mouth_rightdown_x = landmark['mouth_right_corner']['x']
+        mouth_rightdown_y = landmark['mouth_lower_lip_bottom']['y']
+
         color = (55, 255, 155)
         thickness = 3
-        #cv2.rectangle(img, start, end, color, thickness)
-    faceall = img[top:top + height, left:left + width]
-    hair = img
-    #cv2.imshow("hair", hair)
-    #cv2.imshow("faceall", faceall)
-    #cv2.waitKey(0)
-    #cv2.destroyAllWindows()
+        cv2.rectangle(img, (mouth_leftup_x,mouth_leftup_y), (mouth_rightdown_x,mouth_rightdown_y), color, thickness)
+    cv2.imshow("mouth", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 
 http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
