@@ -1,7 +1,49 @@
 import cv2
 import numpy as np
 import math
+import requests
+from json import JSONDecoder
+import datetime
 
+
+# face data get
+def detect_face(filepath1):
+    http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
+    key = "s7iWsJnl0ZfAMJu_IZ4V5mnZyinMGz0n",
+    secret = "o6USx6dPtPKrC_hTO-znQn4WV1zZbyEF"
+    data = {"api_key": key, "api_secret": secret, "return_landmark": "1"}
+    files = {"image_file": open(filepath1, "rb")}
+    img = cv2.imread(filepath1, 0)
+    files = {"image_file": open(filepath1, "rb")}
+    starttime = datetime.datetime.now()
+    response = requests.post(http_url, data=data, files=files)
+    endtime = datetime.datetime.now()
+    print((endtime - starttime).seconds)
+    req_con = response.content.decode('utf-8')
+    req_dict = JSONDecoder().decode(req_con)
+    fo = open("response", "w")
+    fo.write(str(req_dict))
+    fo.close()
+    faces = req_dict['faces']
+    for i in range(len(faces)):
+        face_rectangle = faces[i]['face_rectangle']
+        width = face_rectangle['width']
+        top = face_rectangle['top']
+        left = face_rectangle['left']
+        height = face_rectangle['height']
+        start = (left, top)
+        end = (left + width, top + height)
+        color = (55, 255, 155)
+        thickness = 3
+        # cv2.rectangle(img, start, end, color, thickness)
+    faceall = img[top:top + height, left:left + width]
+    faceall = faceall
+    hair = img
+    # cv2.imshow("hair", hair)
+    # cv2.imshow("faceall", faceall)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+    return faceall, hair
 
 
 # 8 direction filter
@@ -70,8 +112,14 @@ def get_stroke(img, ks, dirNum):
     for i in range(8):
         ker = rotate_img(kernel_Ref, i * 180 / dirNum)
         spn[i] = cv2.filter2D(Cs[i], -1, ker)
-        spn = 1 - spn
         # cv2.imshow('QAQ', spn[i])
         # cv2.waitKey(0)
 
     return spn
+
+
+def pertreat(filepath):
+    P1, P2 = detect_face(filepath)
+    S1 = get_stroke(P1, 3, 8)
+    S2 = get_stroke(P2, 3, 8)
+    return S1, S2

@@ -3,10 +3,11 @@ from json import JSONDecoder
 import datetime
 import cv2
 
-def detect_face(http_url,key,secret,filepath1):
-    data = {"api_key":key, "api_secret": secret, "return_landmark": "1"}
+
+def detect_face(http_url, key, secret, filepath1):
+    data = {"api_key": key, "api_secret": secret, "return_landmark": "1"}
     files = {"image_file": open(filepath1, "rb")}
-    img=cv2.imread(filepath1)
+    img = cv2.imread(filepath1,0)
     files = {"image_file": open(filepath1, "rb")}
     starttime = datetime.datetime.now()
     response = requests.post(http_url, data=data, files=files)
@@ -17,7 +18,7 @@ def detect_face(http_url,key,secret,filepath1):
     fo = open("response", "w")
     fo.write(str(req_dict))
     fo.close()
-    faces=req_dict['faces']
+    faces = req_dict['faces']
     for i in range(len(faces)):
         face_rectangle = faces[i]['face_rectangle']
         width = face_rectangle['width']
@@ -28,13 +29,17 @@ def detect_face(http_url,key,secret,filepath1):
         end = (left + width, top + height)
         color = (55, 255, 155)
         thickness = 3
-        cv2.rectangle(img, start, end, color, thickness)
-    cv2.imshow("a",img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+        #cv2.rectangle(img, start, end, color, thickness)
+    faceall = img[top:top + height, left:left + width]
+    hair = img
+    #cv2.imshow("hair", hair)
+    #cv2.imshow("faceall", faceall)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
 
-http_url ="https://api-cn.faceplusplus.com/facepp/v3/detect"
-key ="s7iWsJnl0ZfAMJu_IZ4V5mnZyinMGz0n"
-secret ="o6USx6dPtPKrC_hTO-znQn4WV1zZbyEF"
-filepath1 ="f1-001-01.jpg"
-detect_face(http_url,key,secret,filepath1)
+
+http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
+key = "s7iWsJnl0ZfAMJu_IZ4V5mnZyinMGz0n"
+secret = "o6USx6dPtPKrC_hTO-znQn4WV1zZbyEF"
+filepath1 = "f1-001-01.jpg"
+detect_face(http_url, key, secret, filepath1)
