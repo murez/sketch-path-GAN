@@ -7,7 +7,7 @@ import cv2
 def detect_face(http_url, key, secret, filepath1):
     data = {"api_key": key, "api_secret": secret, "return_landmark": "1"}
     files = {"image_file": open(filepath1, "rb")}
-    img = cv2.imread(filepath1,0)
+    img = cv2.imread(filepath1, 0)
     files = {"image_file": open(filepath1, "rb")}
     starttime = datetime.datetime.now()
     response = requests.post(http_url, data=data, files=files)
@@ -30,11 +30,12 @@ def detect_face(http_url, key, secret, filepath1):
         mouth_leftup_y = landmark['mouth_upper_lip_top']['y']
         mouth_rightdown_x = landmark['mouth_right_corner']['x']
         mouth_rightdown_y = landmark['mouth_lower_lip_bottom']['y']
-
+        lip = img[mouth_leftup_y:mouth_rightdown_y, mouth_leftup_x:mouth_rightdown_x]
         color = (55, 255, 155)
         thickness = 3
-        cv2.rectangle(img, (mouth_leftup_x,mouth_leftup_y), (mouth_rightdown_x,mouth_rightdown_y), color, thickness)
-    cv2.imshow("mouth", img)
+        cv2.rectangle(img, (mouth_leftup_x, mouth_leftup_y), (mouth_rightdown_x, mouth_rightdown_y), color, thickness)
+    cv2.imshow("mouth", lip)
+    print(mouth_leftup_y, mouth_rightdown_y, mouth_leftup_x, mouth_rightdown_x)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
