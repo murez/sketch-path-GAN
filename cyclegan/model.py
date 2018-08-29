@@ -31,8 +31,8 @@ class InstanceNormalization(Layer):
         return K.batch_normalization(inputs, mean, var, self.beta, self.gamma, self.epsilon)
 
 
-def BuildGenerator(imgset, dim):
-    def Generator(img):
+def BuildGenerator():
+    def Generator():
         ModelG = Sequential()
         # input picture
         ModelG.add(Dense())
@@ -106,7 +106,7 @@ def BuildGenerator(imgset, dim):
         return ModelG
 
 
-def BuildDiscriminator(img):
+def BuildDiscriminator():
     ModelB = Sequential()
     ModelB.add(Conv2D(64, 7, padding='same', strides=2))
     ModelB.add(InstanceNormalization())
