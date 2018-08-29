@@ -52,21 +52,28 @@ def analyze_response(req_dict, img):
         right_eyebrow_lower_middle_y = landmark['right_eyebrow_lower_middle']['y']
         right_eyebrow_rightcorner_x = landmark['right_eyebrow_right_corner']['x']
         right_eyebrow_upper_middle_y = landmark['right_eyebrow_upper_middle']['y']
+        rimg1 = img[mouth_leftup_y:mouth_rightdown_y, mouth_leftup_x:mouth_rightdown_x]
+        rimg2 = img[nose_rightup_y:nose_lowermiddle_y, nose_left_x:nose_right_x]
+        rimg3 = img[left_eye_top_y:left_eye_bottom_y, left_eye_leftcorner_x:left_eye_rightcorner_x]
+        rimg4 = img[right_eye_top_y:right_eye_bottom_y, right_eye_leftcorner_x:right_eye_rightcorner_x]
+        rimg5 = img[left_eyebrow_upper_middle_y:left_eyebrow_lower_middle_y, left_eyebrow_leftcorner_x:left_eyebrow_rightcorner_x]
+        rimg6= img[right_eyebrow_upper_middle_y:right_eyebrow_lower_middle_y, right_eyebrow_leftcorner_x:right_eyebrow_rightcorner_x]
         color = (55, 255, 155)
         thickness = 3
-        cv2.rectangle(img, (mouth_leftup_x, mouth_leftup_y), (mouth_rightdown_x, mouth_rightdown_y), color, thickness)
-        cv2.rectangle(img, (nose_left_x, nose_lowermiddle_y), (nose_right_x, nose_rightup_y), color, thickness)
-        cv2.rectangle(img, (left_eye_leftcorner_x, left_eye_top_y), (left_eye_rightcorner_x, left_eye_bottom_y), color,
-                      thickness)
-        cv2.rectangle(img, (right_eye_leftcorner_x, right_eye_top_y), (right_eye_rightcorner_x, right_eye_bottom_y),
-                      color, thickness)
-        cv2.rectangle(img, (left_eyebrow_leftcorner_x, left_eyebrow_lower_middle_y),
-                      (left_eyebrow_rightcorner_x, left_eyebrow_upper_middle_y), color, thickness)
-        cv2.rectangle(img, (right_eyebrow_leftcorner_x, right_eyebrow_lower_middle_y),
-                      (right_eyebrow_rightcorner_x, right_eyebrow_upper_middle_y), color, thickness)
-    cv2.imshow("mouth", img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+        #cv2.rectangle(img, (mouth_leftup_x, mouth_leftup_y), (mouth_rightdown_x, mouth_rightdown_y), color, thickness)
+        #cv2.rectangle(img, (nose_left_x, nose_lowermiddle_y), (nose_right_x, nose_rightup_y), color, thickness)
+        #cv2.rectangle(img, (left_eye_leftcorner_x, left_eye_top_y), (left_eye_rightcorner_x, left_eye_bottom_y), color,thickness)
+        #cv2.rectangle(img, (right_eye_leftcorner_x, right_eye_top_y), (right_eye_rightcorner_x, right_eye_bottom_y),color, thickness)
+        #cv2.rectangle(img, (left_eyebrow_leftcorner_x, left_eyebrow_lower_middle_y),(left_eyebrow_rightcorner_x, left_eyebrow_upper_middle_y), color, thickness)
+        #cv2.rectangle(img, (right_eyebrow_leftcorner_x, right_eyebrow_lower_middle_y),(right_eyebrow_rightcorner_x, right_eyebrow_upper_middle_y), color, thickness)
+        cv2.imshow("mouth", rimg1)
+        cv2.imshow("nose", rimg2)
+        cv2.imshow("left_eye", rimg3)
+        cv2.imshow("right_eye", rimg4)
+        cv2.imshow("left_eyebrow", rimg5)
+        cv2.imshow("right_eyebrow", rimg6)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
 
 http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
