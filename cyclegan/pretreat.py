@@ -70,21 +70,22 @@ def get_stroke(img, ks, dirNum):
     sp = np.sum(spn, axis=0)
     sp = (sp - np.min(sp)) / (np.max(sp) - np.min(sp))
     S = 1 - sp
-
+    S = S * 225
     return S
 
 
-
-filepath = "../pic/CNHK/photo"
+filepath = "G:/Python-Projects/untitled/pic/CNHK/photo"
 files = os.listdir(filepath)
 for file in files:
     if not os.path.isdir(file):
-        p=get_stroke("../pic/CNHK/photo/"+file,3,8)
+        img = cv2.imread("G:/Python-Projects/untitled/pic/CNHK/photo/"+file, 0)
+        p=get_stroke(img,3,8)
 
-        cv2.imwrite('../pic/CNHK/photo/'+'pertreated'+file,p)
+        cv2.imwrite('G:/Python-Projects/untitled/cyclegan/source/'+'pertreated'+file,p)
 '''
 filepath = 'f1-001-01.jpg'
-simg = cv2.imread(filepath, 0)
+
 S = get_stroke(simg, 3, 8)
+S = S * 225
 cv2.imwrite('pertreated.jpg', S)
 '''

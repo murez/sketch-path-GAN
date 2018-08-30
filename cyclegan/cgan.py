@@ -13,10 +13,11 @@ from PIL import Image
 
 time.clock()
 
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 np.random.seed(1333)
 K.set_image_dim_ordering('tf')
 
-from .model import BuildGenerator, BuildDiscriminator
+from cyclegan.model import BuildGenerator, BuildDiscriminator
 
 # params
 nb_epochs = 200

@@ -5,7 +5,7 @@ from keras.models import *
 import keras.backend as K
 import tensorflow as tf
 
-tf.InstanceNormalization
+#tf.InstanceNormalization
 
 
 class InstanceNormalization(Layer):
@@ -85,7 +85,8 @@ def BuildGenerator(img):
     x = Conv2D(24, 4, strides=2, padding='valid')(x)
     x = BatchNormalization(axis=1)(x)
     x = LeakyReLU()(x)
-    x = Conv2D(1, 3, strides=1, padding='valid', activation="Sigmoid")(x)
+    x = Conv2D(1, 3, strides=1, padding='valid')(x)
+    x = Softmax()(x)
     return Model(inputs=img, outputs=x)
 
 
