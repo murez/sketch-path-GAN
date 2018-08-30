@@ -16,7 +16,7 @@ time.clock()
 np.random.seed(1333)
 K.set_image_dim_ordering('tf')
 
-from model import BuildGenerator, BuildDiscriminator
+from .model import BuildGenerator, BuildDiscriminator
 
 # params
 nb_epochs = 200
