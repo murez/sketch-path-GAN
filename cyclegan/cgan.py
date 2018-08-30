@@ -1,3 +1,4 @@
+# ljqpy,
 import os, sys, time, random
 import numpy as np
 import keras.backend as K
@@ -15,30 +16,28 @@ time.clock()
 np.random.seed(1333)
 K.set_image_dim_ordering('tf')
 
-from model import BuildGenerator, BuildDiscriminator
+from .model import BuildGenerator, BuildDiscriminator
 
 # params
 nb_epochs = 200
 batch_size = 1
 p_lambda = 10
 
-imgsize = 256
-
 adam_lr = 0.000005
 adam_beta_1 = 0.5
 
-imgdirA = '/mnt/smb25/ImageNet/horse2zebra/trainA'
-imgdirB = '/mnt/smb25/ImageNet/horse2zebra/trainB'
-testimgdirA = '/mnt/smb25/ImageNet/horse2zebra/testA'
-testimgdirB = '/mnt/smb25/ImageNet/horse2zebra/testB'
+imgdirA = 'fix it'  # train input material
+imgdirB = 'fix it'  # train input aim
+testimgdirA = 'fix it'  # test input material
+testimgdirB = 'fix it'  # test input aim
 
-modeldir = 'data/'
-testimgdir = 'images/'
+modeldir = 'fix it'  # where to save the model
+testimgdir = 'fix it'  # where to save test img
 
-modelG = BuildGenerator(Input(shape=(imgsize, imgsize, 3)))
-modelF = BuildGenerator(Input(shape=(imgsize, imgsize, 3)))
-modelDG = BuildDiscriminator(Input(shape=(imgsize, imgsize, 3)))
-modelDF = BuildDiscriminator(Input(shape=(imgsize, imgsize, 3)))
+modelG = BuildGenerator(Input(shape=(768, 1024, 3)))
+modelF = BuildGenerator(Input(shape=(768, 1024, 3)))
+modelDG = BuildDiscriminator(Input(shape=(768, 1024, 3)))
+modelDF = BuildDiscriminator(Input(shape=(768, 1024, 3)))
 
 modelG.summary()
 modelDG.summary()
@@ -56,20 +55,20 @@ modelDF.compile(optimizer=Adam(adam_lr, adam_beta_1), loss='mse')
 modelG.compile(optimizer=Adam(adam_lr, adam_beta_1), loss='mse')
 modelF.compile(optimizer=Adam(adam_lr, adam_beta_1), loss='mse')
 
-imageReal = Input(shape=(imgsize, imgsize, 3))
-imageFake = Input(shape=(imgsize, imgsize, 3))
+imageReal = Input(shape=(768, 1024, 3))
+imageFake = Input(shape=(768, 1024, 3))
 DGReal, DGFake = modelDG(imageReal), modelDG(imageFake)
 combDG = Model(inputs=[imageReal, imageFake], outputs=[DGReal, DGFake])
 combDG.compile(optimizer=Adam(adam_lr, adam_beta_1), loss='mse')
 
-imageReal = Input(shape=(imgsize, imgsize, 3))
-imageFake = Input(shape=(imgsize, imgsize, 3))
+imageReal = Input(shape=(768, 1024, 3))
+imageFake = Input(shape=(768, 1024, 3))
 DFReal, DFFake = modelDF(imageReal), modelDF(imageFake)
 combDF = Model(inputs=[imageReal, imageFake], outputs=[DFReal, DFFake])
 combDF.compile(optimizer=Adam(adam_lr, adam_beta_1), loss='mse')
 
-imageA = Input(shape=(imgsize, imgsize, 3))
-imageB = Input(shape=(imgsize, imgsize, 3))
+imageA = Input(shape=(768, 1024, 3))
+imageB = Input(shape=(768, 1024, 3))
 modelDG.trainable = False
 modelDF.trainable = False
 fakeB, fakeA = modelG(imageA), modelF(imageB)
@@ -85,7 +84,7 @@ def ImgGenerator(imgdir):
     while True:
         random.shuffle(imglst)
         for fn in imglst:
-            img = image.load_img(fn, target_size=(imgsize, imgsize))
+            img = image.load_img(fn, target_size=(768, 1024))
             img = (image.img_to_array(img) - 127.5) / 127.5
             yield np.expand_dims(img, axis=0)
 
@@ -93,10 +92,10 @@ def ImgGenerator(imgdir):
 # if the memory is enough for all imgs ...
 def ImgGeneratorS(imgdir):
     imglst = [os.path.join(imgdir, x) for x in os.listdir(imgdir)]
-    X = np.zeros((len(imglst), imgsize, imgsize, 3))
+    X = np.zeros((len(imglst), 768, 1024, 3))
     for i, fn in enumerate(imglst):
         if i % 20 == 0: print('%d/%d' % (i, len(imglst)))
-        img = image.load_img(fn, target_size=(imgsize, imgsize))
+        img = image.load_img(fn, target_size=(768, 1024))
         X[i] = image.img_to_array(img)
     X = (X - 127.5) / 127.5
     ids = list(range(len(imglst)))
@@ -111,8 +110,8 @@ testA = ImgGenerator(testimgdirA)
 testB = ImgGenerator(testimgdirB)
 
 nb_batches = len(os.listdir(imgdirA)) // batch_size
-ones = np.ones((batch_size, imgsize // 16, imgsize // 16, 1))
-zeros = np.zeros((batch_size, imgsize // 16, imgsize // 16, 1))
+ones = np.ones((batch_size, 768 // 16, 1024 // 16, 1))
+zeros = np.zeros((batch_size, 768 // 16, 1024 // 16, 1))
 
 recordG, recordF = [], []
 for epoch in range(nb_epochs):
@@ -153,10 +152,10 @@ for epoch in range(nb_epochs):
     tB = np.concatenate([next(testB) for x in range(4)], axis=0)
     gG = modelG.predict(tA, batch_size=1)
     gF = modelF.predict(tB, batch_size=1)
-    tA = tA.reshape(-1, imgsize, 3)
-    tB = tB.reshape(-1, imgsize, 3)
-    gG = gG.reshape(-1, imgsize, 3)
-    gF = gF.reshape(-1, imgsize, 3)
+    tA = tA.reshape(-1, 1024, 3)
+    tB = tB.reshape(-1, 1024, 3)
+    gG = gG.reshape(-1, 1024, 3)
+    gF = gF.reshape(-1, 1024, 3)
     img = np.concatenate([tA, gG, tB, gF], axis=1)
     img = (img * 127.5 + 127.5).astype(np.uint8)
     Image.fromarray(img).save(os.path.join(testimgdir, 'plot_epoch_{0:03d}_generated.png'.format(epoch)))

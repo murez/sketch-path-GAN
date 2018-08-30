@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 import math
+import os
 
 
-# 8 direction filter
 def rotate_img(img, angle):
     row, col = img.shape
     M = cv2.getRotationMatrix2D((row / 2, col / 2), angle, 1)
@@ -29,13 +29,10 @@ def get_eight_directions(l_len):
 # compute and get the stroke of the raw img
 def get_stroke(img, ks, dirNum):
     height, width = img.shape[0], img.shape[1]
-    img = img * 0.8 + 0.2 * cv2.Laplacian(img, cv2.CV_16S, ksize=3)
     img = np.float32(img) / 255.0
     img = cv2.medianBlur(img, 3)
-    # cv2.imshow('blur', img)
     imX = np.append(np.absolute(img[:, 0: width - 1] - img[:, 1: width]), np.zeros((height, 1)), axis=1)
     imY = np.append(np.absolute(img[0: height - 1, :] - img[1: height, :]), np.zeros((1, width)), axis=0)
-    # img_gredient = np.sqrt((imX ** 2 + imY ** 2))
     img_gredient = imX + imY
 
     kernel_Ref = np.zeros((ks * 2 + 1, ks * 2 + 1))
@@ -69,15 +66,25 @@ def get_stroke(img, ks, dirNum):
     for i in range(8):
         ker = rotate_img(kernel_Ref, i * 180 / dirNum)
         spn[i] = cv2.filter2D(Cs[i], -1, ker)
-        # cv2.imshow('QAQ', spn[i])
-        # cv2.waitKey(0)
-        sp = np.sum(spn, axis=0)
-        sp = (sp - np.min(sp)) / (np.max(sp) - np.min(sp))
-        S = 1 - sp
+
+    sp = np.sum(spn, axis=0)
+    sp = (sp - np.min(sp)) / (np.max(sp) - np.min(sp))
+    S = 1 - sp
+
     return S
 
 
-def pertreat(filepath):
-    P = cv2.imread(filepath, 0)
-    S = get_stroke(P, 3, 8)
-    return S
+
+filepath = "../pic/CNHK/photo"
+files = os.listdir(filepath)
+for file in files:
+    if not os.path.isdir(file):
+        p=get_stroke("../pic/CNHK/photo/"+file,3,8)
+
+        cv2.imwrite('../pic/CNHK/photo/'+'pertreated'+file,p)
+'''
+filepath = 'f1-001-01.jpg'
+simg = cv2.imread(filepath, 0)
+S = get_stroke(simg, 3, 8)
+cv2.imwrite('pertreated.jpg', S)
+'''

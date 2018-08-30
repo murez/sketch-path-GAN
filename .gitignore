@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -107,9 +106,9 @@ venv.bak/
 #idea
 .idea/
 target/
-=======
+
 # About IntelliJ
 *.iml
 /.idea/
 /out/
->>>>>>> d316d0571543f6f74448e383690d44a9458932ba
+
