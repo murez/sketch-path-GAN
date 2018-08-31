@@ -20,6 +20,7 @@ def detect_face(http_url, key, secret, filepath1):
     fo.close()
     return req_dict
 
+
 def analyze_response(req_dict, img):
     faces = req_dict['faces']
     for i in range(len(faces)):
@@ -29,6 +30,7 @@ def analyze_response(req_dict, img):
         top = face_rectangle['top']
         left = face_rectangle['left']
         height = face_rectangle['height']
+        print(width, top, left, height)
         mouth_leftup_x = landmark['mouth_left_corner']['x']
         mouth_leftup_y = landmark['mouth_upper_lip_top']['y']
         mouth_rightdown_x = landmark['mouth_right_corner']['x']
@@ -57,8 +59,10 @@ def analyze_response(req_dict, img):
     rimg2 = img[nose_rightup_y:nose_lowermiddle_y, nose_left_x:nose_right_x]
     rimg3 = img[left_eye_top_y:left_eye_bottom_y, left_eye_leftcorner_x:left_eye_rightcorner_x]
     rimg4 = img[right_eye_top_y:right_eye_bottom_y, right_eye_leftcorner_x:right_eye_rightcorner_x]
-    rimg5 = img[left_eyebrow_upper_middle_y:left_eyebrow_lower_middle_y, left_eyebrow_leftcorner_x:left_eyebrow_rightcorner_x]
-    rimg6= img[right_eyebrow_upper_middle_y:right_eyebrow_lower_middle_y, right_eyebrow_leftcorner_x:right_eyebrow_rightcorner_x]
+    rimg5 = img[left_eyebrow_upper_middle_y:left_eyebrow_lower_middle_y,
+            left_eyebrow_leftcorner_x:left_eyebrow_rightcorner_x]
+    rimg6 = img[right_eyebrow_upper_middle_y:right_eyebrow_lower_middle_y,
+            right_eyebrow_leftcorner_x:right_eyebrow_rightcorner_x]
     color = (55, 255, 155)
     thickness = 3
     cv2.imshow("mouth", rimg1)
@@ -74,7 +78,7 @@ def analyze_response(req_dict, img):
 http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
 key = "s7iWsJnl0ZfAMJu_IZ4V5mnZyinMGz0n"
 secret = "o6USx6dPtPKrC_hTO-znQn4WV1zZbyEF"
-filepath1 = "f1-001-01.jpg"
-img = cv2.imread(filepath1,0)
+filepath1 = "f1-001-01-sz1.jpg"
+img = cv2.imread(filepath1, 0)
 response = detect_face(http_url, key, secret, filepath1)
 analyze_response(response, img)
