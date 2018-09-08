@@ -1,22 +1,29 @@
 # ljqpy,
-import os, sys, time, random
+import os,sys, time, random
 from keras.utils.generic_utils import Progbar
 from keras.optimizers import Adam
 from keras.models import *
 from keras.layers import *
 from keras.preprocessing import image
 from PIL import Image
-import keras.backend.tensorflow_backend as KTF
-import tensorflow as tf
+from cyclegan.model import BuildGenerator, BuildDiscriminator
 
 time.clock()
 
-# KTF.set_session(tf.Session(config=tf.ConfigProto(device_count={'gpu':0})))
 np.random.seed(1333)
 K.set_image_dim_ordering('tf')
 
+class Logger(object):
+    def __init__(self, fileN = "Default.log"):
+        self.terminal = sys.stdout
+        self.log = open(fileN, "a")
 
-from cyclegan.model import BuildGenerator, BuildDiscriminator
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
 
 # params
 nb_epochs = 200
@@ -24,6 +31,8 @@ batch_size = 1
 p_lambda = 10
 adam_lr = 0.000005
 adam_beta_1 = 0.5
+
+sys.stdout = Logger("ConsoleRecord.log")
 
 imgdirA = 'G:/Python-Projects/pic/source/'  # train input material
 imgdirB = 'G:/Python-Projects/pic/aim/'  # train input aim
